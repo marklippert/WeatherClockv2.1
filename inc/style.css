@@ -1,0 +1,191 @@
+BODY {
+  margin: 0;
+  padding: 0;
+  background: #BBBBBB;
+  color: #000000;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 2vw;
+  line-height: 1.4em;
+}
+
+BODY.dark {
+  background: #000000;
+  color: #BBBBBB;
+}
+
+#date {
+  font-size: 4vw;
+  line-height: 2em;
+  position: absolute;
+  top: 0.3em;
+  right: 0;
+  z-index: 10;
+  width: 65.6vw;
+  text-align: center;
+}
+
+#clock {
+  font-family: "Lucida Console", Monaco, monospace;
+  line-height: 0.5em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 4em;
+  right: 0;
+  z-index: 10;
+  width: 65.6vw;
+  text-align: center;
+}
+
+#hour-min {
+  font-size: 17.5vw;
+  line-height: 1em;
+}
+
+#sec-ap {
+  font-size: 7vw;
+  line-height: 1em;
+}
+
+.two-col {
+  float: left;
+  width: 50%;
+}
+
+#current {
+  width: 34.147vw;
+  height: 100vh;
+  text-align: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  font-size: 2.4vw;
+  line-height: 1.3em;
+}
+
+#current .icon {
+  width: 12vw;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+#current .temp {
+  font-size: 9.5vw;
+  font-weight: bold;
+  line-height: 1em;
+  padding: 0.19em 0 0.17em;
+}
+
+#wind {
+  border: 4px solid #818282;
+  border-radius: 50%;
+  width: 7vw; /* width: 55px; */
+  height: 7vw; /* height: 55px; */
+  line-height: 7vw; /* line-height: 55px; */
+  text-align: center;
+  font-weight: bold;
+  font-size: 4.2vw;
+  margin: 1.5vw auto 1vw;
+  position: relative;
+}
+
+#windarrow {
+  width: 100%;
+  height: 100%;
+  display: block;
+  position: absolute;
+  top: 0;
+}
+
+#windarrow:after {
+  content: "";
+  width: 0;
+  height: 0;
+  border-left: 0.6vw solid transparent; /* border-left: 5px solid transparent; */
+  border-right: 0.6vw solid transparent; /* border-right: 5px solid transparent; */
+  border-top: 2.5vw solid #000000; /* border-top: 20px solid #000000; */
+  position: absolute;
+  top: -1.1vw; /* top: -11px; */
+  left: 50%;
+  margin-left: -0.6vw; /* margin-left: -5px; */
+  z-index: 99;
+}
+
+.dark #windarrow:after { border-top: 2.5vw solid #BBBBBB; }
+
+#dew {
+  padding-top: 2.2vw;
+}
+
+.lastup {
+  position: absolute;
+  bottom: 26vw;
+  left: 34.5vw;
+  width: 100%;
+  font-size: 1.3vw;
+  line-height: 1.3em;
+  text-align: left;
+}
+
+.alert {
+  position: absolute;
+  bottom: 29vw;
+  left: 34.147vw;
+  width: 65.6vw;
+  color: red;
+  font-size: 2.5vw;
+}
+
+#radar {
+  width: 34.147vw;
+  height: 34.147vw;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  overflow: hidden;
+}
+
+#radar2 {
+  width: 25.9vw;
+  height: 25.9vw;
+  position: absolute;
+  bottom: 0;
+  left: 34.147vw;
+  overflow: hidden;
+}
+
+#radar DIV IMG,
+#radar2 DIV IMG {
+  opacity: 0.75;
+}
+
+#forecast {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 39.953vw;
+  height: 25.9vw;
+}
+
+.fc-day {
+  width: 33.33%;
+  float: left;
+  text-align: center;
+  font-size: 1.85vw;
+  line-height: 1.2em;
+}
+
+.fc-day:nth-child(-n+3) {
+  padding-bottom: 1.3em;
+}
+
+.fc-day IMG {
+  max-width: 50%;
+  height: auto;
+}
+
+.hi { color: #D5202A; }
+.lo { color: #0053AE; }
